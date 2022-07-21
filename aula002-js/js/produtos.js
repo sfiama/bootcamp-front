@@ -20,10 +20,11 @@ let products = [
     ]
 
 function addId(array){
-    let i = 0;
-    array.map(function(el){
-        return el.id = ++i
-    })
+    array.id = 0
+    for(let i = 0; i < array.length; i++){
+        array[i].id = i+1
+    }
+    return array
 }
 
 function productName(array){
@@ -33,18 +34,8 @@ function productName(array){
 }
 
 function productById(array, id){
-        let product;
-    for(let i = 0; i < array.length; i++){
-        if(array[i].id = id)
-        product = array[i] 
-    }
-    return product; 
-      
+    return array.find(el=> el.id ===id)      
 }
-
-// function getProductById(id) {
-//     return products.find(product => product.id == id);
-// }
 
 // products[id = 3]
 
@@ -59,9 +50,9 @@ return array.filter((el) => el.colors.length === 0)
 
 
 console.log(products);
-productName("Nome dos produtos",products);
+productName(products);
 addId(products);
-console.log("Produto por id", productById(products,1));
+// console.log("Produto por id", productById(products,1));
 console.log("Produto por cor",productByColor(products, "black"))
 console.log("Produto sem cor",productWithoutColor(products))
 
