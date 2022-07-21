@@ -20,8 +20,7 @@ let products = [
     ]
 
 function addId(array){
-    array.id = 0
-    for(let i = 0; i < array.length; i++){
+        for(let i = 0; i < array.length; i++){
         array[i].id = i+1
     }
     return array
@@ -52,7 +51,7 @@ return array.filter((el) => el.colors.length === 0)
 console.log(products);
 productName(products);
 addId(products);
-// console.log("Produto por id", productById(products,1));
+console.log("Produto por id", productById(products,1));
 console.log("Produto por cor",productByColor(products, "black"))
 console.log("Produto sem cor",productWithoutColor(products))
 
