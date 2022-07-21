@@ -1,3 +1,10 @@
+function calcularPreco(produto, preco){
+    let total = calculaTotal(preco);
+    return `O produto R$ ${produto} custa R$ ${preco}. Seu custo de envio é
+    R$ 
+    ${total-preco}. Portanto, o preço final é R$ ${total}'`;
+}
+
 function calculaFrete (preco){
     let frete; 
     if(preco > 1 && preco<=2000 ){
@@ -16,12 +23,7 @@ function calculaTotal(preco){
     return valorFinal
 }
 
-function calcularPreco(produto, preco){
-    let total = calculaTotal(preco);
-    return `O produto R$ ${produto} custa R$ ${preco}. Seu custo de envio é
-    R$ 
-    ${total-preco}. Portanto, o preço final é R$ ${total}'`;
-}
+
 
 console.log(calcularPreco('Macbook', 2500));
 console.log(calcularPreco('Celular', 500));
