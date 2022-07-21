@@ -6,11 +6,8 @@ function calculaFrete (preco){
         frete = 450;
     }else if(preco > 4000){
         frete = 700;
-    }else {
-        return " Não foi possivel calcular o frete, pedimos que entre em contato com nossa central de relacionamento."
     }
     return frete
-
 }
 
 function calculaTotal(preco){
