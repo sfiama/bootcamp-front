@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
+const routerUser = require('./routes/routerUser')
 const PORT = 3000;
 
-app.get("/", (req,res)=>{
-    res.json({message: 'ok'})
-})
+app.use(express.json());
+app.use('/api', routerUser)
 
 app.listen(PORT, ()=>{
     console.log(`Running in http://localhost:${PORT}`);
